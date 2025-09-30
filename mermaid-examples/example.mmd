@@ -1,0 +1,40 @@
+---
+config:
+  look: handDrawn
+  theme: neutral
+---
+
+flowchart LR
+%% Group 1: Melt & mix
+subgraph MeltGroup[ ]
+direction LR
+    A[A]
+    B[B]
+    C[C]
+end
+MeltGroup --> Melt[Melt & mix]
+
+%% Group 2: Whisk
+subgraph WhiskGroup[ ]
+direction LR
+D[D]
+E[E]
+end
+
+subgraph flour[ ]
+direction LR
+F[F]
+end
+
+WhiskGroup --> Whisk[Whisk]
+
+%% Final step
+Melt --> Combine[Pour into pan]
+Whisk --> j(" ")
+j ---> Combine
+
+F -.-> j
+
+
+
+
