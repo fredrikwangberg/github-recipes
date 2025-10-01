@@ -1,32 +1,35 @@
 ---
 title: Chokladbollar
+config:
+  look: handDrawn
+  theme: neutral
 ---
 
 flowchart LR
 
 subgraph " "
-    direction LR
-   A["3 dl havregryn"]
-end
 
-subgraph " "
-
+    A["3 dl havregryn"]
     B[1 dl socker]
     C[2 tsp vaniljsocker]
-    D["3 msk kakao \n (fin, fairtrade)" ]
+    D["3 msk kakao (fin, fairtrade)" ]
     E["2 msk starkt kaffe" ]
+    F["100 g smör"]
 end
 
-A --> Step3["Mixa i mixer"]
 
-
-Step3 --> Step1["Rör ihop"]
+A --> |Mixa fint i mixer|Step1["Rör ihop"]
 B --> Step1
 C --> Step1
 D --> Step1
 E --> Step1
-
+F --> Step1
 
 Step1 --> Step2["Rulla i finriven kokos/pärlsocker"]
+
+%% Styles
+style Step1 fill:#e0e0e0,stroke:#333,stroke-width:1px
+style Step2 fill:#e0e0e0,stroke:#333,stroke-width:1px
+
 
 
